@@ -61,7 +61,7 @@ INSERT INTO books (title, author_id, price, publication_date) VALUES
     ('Harry Potter and the Chamber of Secrets', 2, 29.99, '1998-07-02');
 
 INSERT INTO customers (customer_name, email, address) VALUES
-    ('John Doe', 'john.doe@email.com', '123 Main St, City'),
+    ('Customers', 'customers@email.com', '123 Main St, City'),
     ('Jane Smith', 'jane.smith@email.com', '456 Oak Ave, Town'),
     ('Bob Wilson', 'bob.wilson@email.com', '789 Pine Rd, Village'),
     ('Alice Brown', 'alice.brown@email.com', '321 Elm St, County'),
