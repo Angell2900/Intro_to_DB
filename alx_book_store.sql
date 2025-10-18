@@ -53,6 +53,7 @@ INSERT INTO authors (author_name) VALUES
     ('Agatha Christie');
 
 INSERT INTO books (title, author_id, price, publication_date) VALUES
+    ('Books', 1, 19.99, '2023-01-01'),
     ('Harry Potter and the Philosophers Stone', 2, 29.99, '1997-06-26'),
     ('A Game of Thrones', 3, 24.99, '1996-08-01'),
     ('The Shining', 4, 19.99, '1977-01-28'),
