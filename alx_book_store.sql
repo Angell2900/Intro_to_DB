@@ -38,16 +38,45 @@ CREATE TABLE order_details (
     FOREIGN KEY (book_id) REFERENCES books(book_id)
 );
 
--- Add indexes for better performance
+
 CREATE INDEX idx_books_author ON books(author_id);
 CREATE INDEX idx_orders_customer ON orders(customer_id);
 CREATE INDEX idx_order_details_order ON order_details(order_id);
 CREATE INDEX idx_order_details_book ON order_details(book_id);
 
--- Insert sample authors data
+
 INSERT INTO authors (author_name) VALUES
     ('Authors'),
     ('J.K. Rowling'),
     ('George R.R. Martin'),
     ('Stephen King'),
     ('Agatha Christie');
+
+INSERT INTO books (title, author_id, price, publication_date) VALUES
+    ('Harry Potter and the Philosophers Stone', 2, 29.99, '1997-06-26'),
+    ('A Game of Thrones', 3, 24.99, '1996-08-01'),
+    ('The Shining', 4, 19.99, '1977-01-28'),
+    ('Murder on the Orient Express', 5, 14.99, '1934-01-01'),
+    ('Harry Potter and the Chamber of Secrets', 2, 29.99, '1998-07-02');
+
+INSERT INTO customers (customer_name, email, address) VALUES
+    ('John Doe', 'john.doe@email.com', '123 Main St, City'),
+    ('Jane Smith', 'jane.smith@email.com', '456 Oak Ave, Town'),
+    ('Bob Wilson', 'bob.wilson@email.com', '789 Pine Rd, Village'),
+    ('Alice Brown', 'alice.brown@email.com', '321 Elm St, County'),
+    ('Charlie Davis', 'charlie.davis@email.com', '654 Maple Dr, State');
+
+INSERT INTO orders (customer_id, order_date) VALUES
+    (1, '2023-01-15'),
+    (2, '2023-02-20'),
+    (3, '2023-03-25'),
+    (4, '2023-04-30'),
+    (5, '2023-05-05');
+
+INSERT INTO order_details (order_id, book_id, quantity) VALUES
+    (1, 1, 2),
+    (1, 2, 1),
+    (2, 3, 1),
+    (3, 4, 3),
+    (4, 5, 1),
+    (5, 1, 1);
