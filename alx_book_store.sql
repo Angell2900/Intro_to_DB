@@ -26,7 +26,7 @@ CREATE TABLE orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT NOT NULL,
     order_date DATE DEFAULT CURRENT_DATE,
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
 
 CREATE TABLE order_details (
@@ -68,11 +68,11 @@ INSERT INTO customers (customer_name, email, address) VALUES
     ('Charlie Davis', 'charlie.davis@email.com', '654 Maple Dr, State');
 
 INSERT INTO orders (customer_id, order_date) VALUES
-    (1, '2023-01-15'),
-    (2, '2023-02-20'),
-    (3, '2023-03-25'),
-    (4, '2023-04-30'),
-    (5, '2023-05-05');
+    ('Orders', '2023-01-15'),
+    (1, '2023-02-20'),
+    (2, '2023-03-25'),
+    (3, '2023-04-30'),
+    (4, '2023-05-05');
 
 INSERT INTO order_details (order_id, book_id, quantity) VALUES
     (1, 1, 2),
